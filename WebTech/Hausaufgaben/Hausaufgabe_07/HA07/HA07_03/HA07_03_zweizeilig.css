@@ -1,0 +1,61 @@
+.row::after { 
+content: ""; 
+  clear: both; 
+  display: block; 
+} 
+[class*="col-"] { 
+        float:left;
+    position:relative;
+} 
+
+.col-1 {
+    width: 24%;
+    background-color: white;
+} 
+.col-2 {
+    width: 75%;
+    background-color: white;
+    border-left-style: solid;
+    background-color: white;
+} 
+
+div{
+   
+}
+.footer>li{
+    display: inline-block;
+}
+
+.row{
+    background-color: lightgrey;
+     min-width: 700px;
+}
+
+
+nav{
+    border-color:black;
+    border-bottom-style: solid;
+    background-color: white;
+}
+article{
+    background-color: white;
+}
+
+header{
+
+    border-color:black;
+    border-bottom-style: solid;
+}
+body{
+    border-color: black;
+    border-style: solid;
+}
+
+footer{
+    border-color: black;
+    border-top-style: solid;
+}
+
+
+
+*/

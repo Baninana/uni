@@ -1,0 +1,49 @@
+/*Aufgabe 1*/
+
+h1 {
+   text-transform: uppercase;
+   text-align: center;
+   text-shadow: 4px 4px 5px grey;
+}
+
+h2{
+   text-transform: uppercase;
+   text-align: center;
+}
+    
+
+
+pn {
+  text-align: center;
+  color: grey;
+  font-family: courier ,arial;
+  font-size: 1.4rem;
+  font-style: italic;
+  
+}
+
+p{
+    text-align: center;
+}
+
+div{
+    text-align: center;
+}
+
+/*Aufgabe 2*/
+
+
+ol{ 
+    margin-top:0px;
+    margin-left: 0px 
+}
+ol>li {
+    display: inline-block;
+    margin-right: 20px;
+    border-left: 2px dashed red;
+    border-right: 2px dashed red;
+}
+
+ol>li:nth-child(even){
+    font-style:italic;
+}

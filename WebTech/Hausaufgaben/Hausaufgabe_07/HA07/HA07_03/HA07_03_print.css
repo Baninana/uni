@@ -1,0 +1,17 @@
+@media only print{
+    header{
+        display:none;
+    }
+        
+    nav{
+        display:none;
+    }
+    
+    @media (orientation:landscape){
+        article{
+            column-count:3;
+        /*-webkit-column-count:3;
+        -moz-column-count:3;*/
+        }
+    }
+}

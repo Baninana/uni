@@ -1,0 +1,42 @@
+Welche verschiedenen Layout-Arten gibt es? Was sind die Unterschiede?
+
+    Festes Layout:
+        - statische Längenangaben (px, pt, pc, mm, cm, in)
+        - nicht abhängig vom Viewport
+        
+    Flüssiges Layout:
+        - Längenangaben in Prozent
+        - ermöglicht dynamische anpassung an Viewport
+        
+    Elastisches Layout:
+        - Längenangaben in em
+        - Anpassung an Schriftgröße (nicht an Viewport)
+        
+    Adaptives Layout:
+        - Umbruchmarken bei bestimmten Viewportgrößen
+        - dazwischen fest
+        
+    Responsive Layout:
+        - Wie adaptives Layout, aber flüssig zwischen den Umbruchmarken
+        
+        
+Worauf beziehen sich Prozentangaben? Finden Sie heraus, worauf sich Prozentangaben bei
+margin-left, margin-top, height, font-size und border-top-width beziehen (z.B. im MDN).
+
+    Die Prozentangaben beziehen sich im jeweiligen zusammenhang auf das Elternelement:
+        margin-left:        Breite des Elternelements
+        margin-top:                   -||-
+        height:             Höhe des Elternelements
+        font-size:          Schriftgröße des Elternelements (x% = x/100 em)
+        border-top-width:   Angabe von Prozenten nicht zulässig
+        
+        
+Was ist die Einheit em und was ist der Unterschied zur Einheit rem?
+
+    em bezieht sich auf die Größe des Elternelements, rem bezieht sich auf die Standardgröße
+    
+    
+Was bedeuten die Einheiten vw und vh?
+
+    vw: 1% der Breite des Viewports
+    vh: 1% der Höhe des Viewports

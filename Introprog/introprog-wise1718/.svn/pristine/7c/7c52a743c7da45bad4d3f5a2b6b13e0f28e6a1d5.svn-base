@@ -1,0 +1,68 @@
+/* === INTROPROG ABGABE ===
+ * Blatt 1, Aufgabe 2
+ * Tutorium: t09
+ * Abgabe von: Nina Smeenk
+ * ========================
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+#include "arrayio.h"
+
+int MAX_LAENGE = 1000;
+int MAX_VALUE = 100;
+
+void count_sort_calculate_counts(int input_array[], int len, int count_array[]) {
+    // Hier Funktion implementieren
+    for(int i=0;i<len;i++){
+		count_array[input_array[i]] ++;
+	}
+}
+
+void count_sort_write_output_array(int output_array[], int len, int count_array[]) {
+    // Hier Funktion implementieren
+    int ind=0;
+    for(int i=0;i<MAX_VALUE+1;i++){
+		int anzahl = count_array[i];
+		for(int j=0 ;j<anzahl ;j++){
+			output_array[ind+j]=i;
+			}
+		ind+=anzahl;
+	}
+}
+
+int main(int argc, char *argv[]) {
+
+    if (argc < 2){
+        printf("Aufruf: %s <Dateiname>\n", argv[0]);
+        printf("Beispiel: %s zahlen.txt\n", argv[0]);
+        exit(1);
+    }
+
+    char *filename = argv[1];
+
+    int input_array[MAX_LAENGE];
+    int len = read_array_from_file(input_array, MAX_LAENGE, filename);
+
+    printf("Unsortiertes Array:");
+    print_array(input_array, len);
+
+    // HIER alle nötigen Deklarationen und Funktionsaufrufe für Count Sort einfügen
+
+    int * count_array = calloc(MAX_VALUE+1,sizeof(int));
+    
+    count_sort_calculate_counts(input_array,len,count_array);
+    
+    int * output_array = calloc(MAX_VALUE+1,sizeof(int));
+    
+    count_sort_write_output_array(output_array,len,count_array);
+
+    printf("Sortiertes Array:");
+    // Folgende Zeile einkommentieren, um das Array auszugeben
+     print_array(output_array, len);
+    
+    free(count_array);
+    free(output_array);
+
+    return 0;
+}
